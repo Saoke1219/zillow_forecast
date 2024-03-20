@@ -21,13 +21,13 @@ The client aims to capitalize on the potential highlighted in the articles by id
 
 ## 1. Data Preparation
 
-+Imported the necessary libraries
-+Loading the dataset
-+Checked for the general data shape.
-+Checked the dataset info
-+Filtered the chosen zipcodes
-+Checking and handling missing values in our dataset.
-+Checked for duplicates
++ Imported the necessary libraries
++ Loading the dataset
++ Checked for the general data shape.
++ Checked the dataset info
++ Filtered the chosen zipcodes
++ Checking and handling missing values in our dataset.
++ Checked for duplicates
 
 ## 2. Data Pre-processing
 Conducted some analysis and visualizations to find out how many cities are in Miami-Dade and how the Zip codes are distributed among the cities. The number of cities in Miami-Dade county are 33 with Miami having the highest number of Zip code distribution. Since our client has a budget of 300,000 dollars, we will further filter our dataframe and only consider Zip codes that fall under this budget.
