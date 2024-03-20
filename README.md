@@ -1,8 +1,8 @@
-#FORECASTING HIGH-VALUE ZIPCODES BY UTILIZING TIME SERIES ANALYSIS#
+**#FORECASTING HIGH-VALUE ZIPCODES BY UTILIZING TIME SERIES ANALYSIS**#
 
 ![4-modern-doral-model-60-exterior](https://github.com/Saoke1219/zillow_forecast/assets/144773775/98f6ad7f-58cc-4f42-9e3b-46ee27b37bbe)
 
-**OVERVIEW**
+#**OVERVIEW**
 
 
 In the dynamic world of real estate investments, strategic decision-making is crucial for achieving success and maximizing returns. With the advent of advanced data analytics techniques, such as time series modeling, investors now have powerful tools at their disposal to forecast market trends and identify lucrative opportunities. In this project, we delve into the domain of real estate investment by harnessing the wealth of information provided by the https://www.zillow.com/research/data/ to unlock actionable insights for prospective investors.
