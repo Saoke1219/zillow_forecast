@@ -22,14 +22,15 @@ The client aims to capitalize on the potential highlighted in the articles by id
 ## 1. Data Preparation
 
 + Imported the necessary libraries
-+ Loading the dataset
++ Loaded the dataset
 + Checked for the general data shape.
 + Checked the dataset info
 + Filtered the chosen zipcodes
-+ Checking and handling missing values in our dataset.
++ Checked and handled missing values in our dataset
 + Checked for duplicates
 
-## 2. Data Pre-processing
+
+## 2. Data Preprocessing
 Conducted some analysis and visualizations to find out how many cities are in Miami-Dade and how the Zip codes are distributed among the cities. The number of cities in Miami-Dade county are 33 with Miami having the highest number of Zip code distribution. Since our client has a budget of 300,000 dollars, we will further filter our dataframe and only consider Zip codes that fall under this budget.
 
 ## 3. EDA and Visualization
@@ -60,6 +61,64 @@ The above pie plot shows the zipcodes that had the highest steady growth after e
 
 We went ahead to filter the data for the selected Zip codes and time period.
 
+## 4. Data preprocessing for the selected top 5 zipcodes.
+Before fitting the a basic ARIMA model further data preprocessing needs to take place. When working with time series models, it's crucial to assume that the data is stationary. Stationary time series data is essential for efficient model development. Prior to modeling, a thorough assessment of data stationarity will be conducted using the following methods:
 
+Dickey-Fuller Test: The Dickey-Fuller test will be employed to assess the stationarity of the data. This statistical test helps determine if a unit root is present in the series, which is indicative of non-stationarity.
+
+Rolling Mean Analysis: Additionally, a rolling mean analysis will be performed. This involves calculating the mean over a sliding window of observations. Fluctuations in the rolling mean indicate non-stationarity.
+
+In cases where the data is identified as non-stationary, a differencing technique will be applied. Differencing involves computing the difference between consecutive observations.
+
+#### 4.1 create a new dataframe with the topfive zipcodes.
+    Consolidate the filtered data into a single dataframe making it easier to work with and analyse.
+#### 4.2 Drop unnecessary columns
+    For one to perform a stationarity and seasonality test,we need to drop columns that are not relevant to the analysis or are redundant. We dropped RegionID because it likely represents some identifier and is not relevant for the analysis.
+#### 4.3 Stationarity Test
+    Before applying the ADF test, it's important to visually inspect the time series plots for any obvious trends, seasonality, or non-stationary behavior.
+#### 4.1.1 Rolling Mean and Standard Deviation
+For Zipcodes 33161, 33177, 33162, and 33189: The p-values are greater than 0.05, indicating that we fail to reject the null hypothesis at a 5% significance level. Therefore, we cannot conclude that these series are stationary.
+
+For Zipcodes 33055: The p-value is very small (0.001), indicating strong evidence against the null hypothesis. However, a visual inspection is not accurate enough to just rely on it and proceed with fitting an ARIMA model. Therefore, it is necessary to perform an Augmented Dickey-Fuller test for stationarity.
+#### 4.1.2 Augmented Dickey-Fuller Test
+Null hypothesis(the series is stationary);
+For Zipcode 33161: Test Statistic is -1.698, which is greater than the critical values at all significance levels (1%, 5%, and 10%). This suggests that we fail to reject the null hypothesis, indicating that the series is non-stationary.
+
+For Zipcodes 33177, 33162, and 33189: Test Statistic is 0.242, -0.382, and -0.019 respectively. In each case, the test statistic is greater than the critical values, indicating non-stationarity.
+
+For Zipcode 33055: Test Statistic is 1.924, which is less than the critical values at all significance levels. This suggests rejecting the null hypothesis, indicating that the series is stationary.
+
+We need our series to be stationary for modeling. we now go a step further and perform differencing.
+#### 4.1.3 Differencing
+Is often applied to achieve stationarity by removing trends or seasonal components from the time series data. For zip codes 33161 33177, 33162, and 33189, differencing is necessary to make the series stationary before further analysis or modeling.
+
+After differencing we note a marked improvement that all data is stationary.
+
+##  5. Modelling
+**5.1 Basic SARIMA Model.**
+
+Using a baseline model first is a necessary approach in time series forecasting as it helps in gaining insights into the data, assessing model performance, and guiding subsequent modeling efforts.
+
+**5.1.1 Plot (ACF) and (PACF)**
+
+Autocorrelation function and Partial autocorrelation function is a method use to provide insight into the selection of ones (p,d,q) as well as (p,d,q,s) which are our seasonal orders for a SARIMA model. Hence why it's generally recommended to visually inspect the ACF and PACF plots to guide the selection process, especially when dealing with complex or ambiguous time series patterns.
+
+# MODEL EVALUATION
+*Zip Code 33055: The RMSE is 0.01. This indicates a very good fit between the forecasting model and the actual data for this zip code. A low RMSE value suggests that the model's predictions are generally close to the actual values.*
+
+*Zip Code 33161: The RMSE is 0.00, which is exceptionally low. It suggests an almost perfect fit between the model's predictions and the actual data. In practice, such a low RMSE might be due to a very good model fit or potentially overfitting to the specific data used for training.*
+
+*Zip Code 33162: The RMSE is also 0.00, similar to zip code 33161.*
+
+*Zip Code 33177: The RMSE is 0.01, similar to zip code 33055. This indicates a good model fit, but there's slightly more error compared to zip codes 33161 and 33162.*
+
+*Zip Code 33189: The RMSE is 0.00. Here, the interpretation is similar to zip codes 33161 and 33162.*
+
+#### RMSE: 0.002172299659738043
+    lower RMSE values indicates a good model performance, as they signify smaller deviations between predicted and actual values.
+
+## 6. 3 Year Forecast.
+## Top five Zip Codes with the highest ROI forecast
+![download (3)](https://github.com/Saoke1219/zillow_forecast/assets/144773775/f2cd8262-f94c-414f-96a8-d465b6a48055)
 
 
