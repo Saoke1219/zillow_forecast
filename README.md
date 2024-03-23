@@ -117,7 +117,7 @@ Autocorrelation function and Partial autocorrelation function is a method use to
 #### RMSE: 0.002172299659738043
     lower RMSE values indicates a good model performance, as they signify smaller deviations between predicted and actual values.
 
-## 6. 3 Year Forecast.
+## 6. Three Year Forecast.
 ## Top five Zip Codes with the highest ROI forecast
 ![download (3)](https://github.com/Saoke1219/zillow_forecast/assets/144773775/f2cd8262-f94c-414f-96a8-d465b6a48055)
 
