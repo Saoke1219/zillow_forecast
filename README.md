@@ -5,12 +5,12 @@
 # OVERVIEW
 
 
-In the dynamic world of real estate investments, strategic decision-making is crucial for achieving success and maximizing returns. With the advent of advanced data analytics techniques, such as time series modeling, investors now have powerful tools at their disposal to forecast market trends and identify lucrative opportunities. In this project, we delve into the domain of real estate investment by harnessing the wealth of information provided by the [Zillow daset](https://www.zillow.com/research/data/ )to unlock actionable insights for prospective investors.
+In the dynamic world of real estate investments, strategic decision-making is crucial for achieving success and maximizing returns. With the advent of advanced data analytics techniques, such as time series modeling, investors now have powerful tools at their disposal to forecast market trends and identify lucrative opportunities. In this project, we delve into the domain of real estate investment by harnessing the wealth of information provided by the [Zillow dataset](https://www.zillow.com/research/data/ ) to unlock actionable insights for prospective investors.
 
 # BUSINESS UNDERSTANDING
 
 
-Our client is an investor with a budget of 300,000 dollars who, after reading articles such as (https://www.worldbizmagazine.net/post/miami-dade-best-region-in-north-america-for-investment-2021-2022), believes that Miami-Dade County presents the most promising investment opportunities in North America. Inspired by these insights, they seek to leverage data science and real estate expertise to make informed investment decisions in the area.
+Our client is an investor with a budget of 300,000 dollars who, after reading articles such as [worldbizmagazine data](https://www.worldbizmagazine.net/post/miami-dade-best-region-in-north-america-for-investment-2021-2022), believes that Miami-Dade County presents the most promising investment opportunities in North America. Inspired by these insights, they seek to leverage data science and real estate expertise to make informed investment decisions in the area.
 
 # BUSINESS PROBLEM
 
