@@ -121,8 +121,11 @@ Autocorrelation function and Partial autocorrelation function is a method use to
 ## Top five Zip Codes with the highest ROI forecast
 ![download (3)](https://github.com/Saoke1219/zillow_forecast/assets/144773775/f2cd8262-f94c-414f-96a8-d465b6a48055)
 
-## Conclusions and Recomendations 
-
+## Conclusions and Recommendations 
+## Limitations 
+1.	Stationarity Assumption: Many time series models, such as ARIMA (AutoRegressive Integrated Moving Average), assume stationarity, meaning that the statistical properties of the time series data remain constant over time. In real-world data, stationarity may not hold, leading to biased estimates and unreliable forecasts.
+2.	Limited Handling of Seasonality and Trends: While seasonal and trend components can be incorporated into time series models, the ability to capture complex seasonal patterns or long-term trends may be limited, especially in models with fixed specifications.
+3.	Inability to Capture Structural Changes: Time series models assume that the underlying data-generating process remains stable over time. However, significant structural…
 
 ## Next Steps 
 This analysis was done just looking at the average home values of each region over the 22 year period. There are many other factors that could also play into the potential for investing in these regions. Therefore, my next steps would be to look into some of these other factors, such as:
