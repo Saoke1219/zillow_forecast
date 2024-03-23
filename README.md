@@ -125,3 +125,8 @@ Autocorrelation function and Partial autocorrelation function is a method use to
 
 
 ## Next Steps 
+This analysis was done just looking at the average home values of each region over the 22 year period. There are many other factors that could also play into the potential for investing in these regions. Therefore, my next steps would be to look into some of these other factors, such as:
+Potential for severe weather (i.e. hurricanes, tornadoes)
+ * Strength of school district
+ * Crime rate 
+ * Age of homes
