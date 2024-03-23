@@ -118,10 +118,25 @@ Autocorrelation function and Partial autocorrelation function is a method use to
     lower RMSE values indicates a good model performance, as they signify smaller deviations between predicted and actual values.
 
 ## 6. Three Year Forecast.
+
 ## Top five Zip Codes with the highest ROI forecast
 ![download (3)](https://github.com/Saoke1219/zillow_forecast/assets/144773775/f2cd8262-f94c-414f-96a8-d465b6a48055)
 
-## Conclusions and Recommendations 
+## Conclusions
+In conclusion, the project successfully addressed the client's objective of identifying high-ROI investment opportunities in Miami-Dade County. By leveraging advanced analytics and robust modeling techniques, we provided actionable insights that align with the client's investment goals. Moving forward, a proactive and adaptive approach to investment management will be crucial for maximizing returns and minimizing risks in the dynamic real estate market of Miami-Dade County. The Baseline ARIMA model demonstrated strong predictive performance with remarkably low Mean Squared Error (MSE) values for both the training and test datasets. The model's ability to capture and reproduce historical trends showcased its effectiveness.
+
+# Step 9. Recommendations
+
+Based on our analysis, we offer the following recommendations to the client:
+
+Diversification: Consider diversifying investments across multiple zip codes to mitigate risks associated with localized market fluctuations.
+
+Continuous Monitoring: Continuously monitor market dynamics, economic trends, and regulatory changes to adapt investment strategies accordingly.
+
+Long-Term Perspective: While focusing on short-term ROI is essential, also consider long-term appreciation potential and rental income stability for sustained profitability.
+
+Risk Management: Implement risk management strategies, such as thorough due diligence, portfolio diversification, and financial modeling, to safeguard investments against unforeseen events.
+
 ## Limitations 
 1.	Stationarity Assumption: Many time series models, such as ARIMA (AutoRegressive Integrated Moving Average), assume stationarity, meaning that the statistical properties of the time series data remain constant over time. In real-world data, stationarity may not hold, leading to biased estimates and unreliable forecasts.
 2.	Limited Handling of Seasonality and Trends: While seasonal and trend components can be incorporated into time series models, the ability to capture complex seasonal patterns or long-term trends may be limited, especially in models with fixed specifications.
